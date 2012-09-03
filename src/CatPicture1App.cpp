@@ -18,7 +18,7 @@ class CatPicture1App : public AppBasic {
 
 void CatPicture1App::setup()
 {
-	brightness = 0.0f;
+	brightness = 1.0f;
 }
 
 void CatPicture1App::mouseDown( MouseEvent event )
@@ -27,9 +27,9 @@ void CatPicture1App::mouseDown( MouseEvent event )
 
 void CatPicture1App::update()
 {
-	brightness = brightness + 0.01f;
-	if(brightness > 1.0f) {
-		brightness = 0.0f;
+	brightness = brightness - 0.01f;
+	if(brightness < 0.0f) {
+		brightness = 1.0f;
 	}
 }
 
